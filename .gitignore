@@ -1,0 +1,37 @@
+# dependencies / build
+node_modules/
+dist/
+dev-dist/
+coverage/
+*.tsbuildinfo
+
+# local config and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# generated audio / recordings / backups
+*.wav
+*.mp3
+*.m4a
+*.webm
+backups/
+out/
+
+# GAS local clone (clasp)
+gas/.clasp.json
+
+# internal / confidential (not for GitHub)
+internal/
+
+# editor / OS
+.DS_Store
+.vscode/
+.idea/
+.obsidian/
+*.log
+
+# tests
+playwright-report/
+test-results/
