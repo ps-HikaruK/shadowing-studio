@@ -76,7 +76,9 @@ export function PlayerPage() {
   const listRef = useRef<HTMLOListElement>(null);
   const relinkAttemptedFor = useRef<string | null>(null);
   const engineRef = useRef(engine);
-  engineRef.current = engine;
+  useEffect(() => {
+    engineRef.current = engine;
+  });
 
   // 英文非表示中の一時表示(タップで数秒だけ見せる)。
   // 「どの文を表示中か」を持つことで、文が変わったら自動的に非表示へ戻る(次の文を先読みさせない)
